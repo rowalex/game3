@@ -1,0 +1,415 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>ИГРА</name>
+    <events>
+        <variable constant="0" name="money1" sid="3315387534137906" static="0" type="number">0</variable>
+        <variable constant="0" name="money2" sid="3426379872256642" static="0" type="number">0</variable>
+        <variable constant="0" name="hp4" sid="8525955703239226" static="0" type="number">5</variable>
+        <variable constant="0" name="hp3" sid="808428023405173" static="0" type="number">5</variable>
+        <variable constant="0" name="dlin1" sid="5481006322723881" static="0" type="number">50</variable>
+        <variable constant="0" name="dlin2" sid="3950073484205774" static="0" type="number">50</variable>
+        <variable constant="0" name="damage1" sid="9446036261997112" static="0" type="number">0.5</variable>
+        <variable constant="0" name="damage2" sid="5228450474230393" static="0" type="number">0.5</variable>
+        <variable constant="0" name="hp1" sid="8487084862400469" static="0" type="number">5</variable>
+        <variable constant="0" name="hp2" sid="8561761161803594" static="0" type="number">5</variable>
+        <event-block sid="6579348129038471">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="5528906864367967" type="System" />
+            </conditions>
+            <actions>
+                <action id="-4" name="Set position to another object" sid="3673228555290236" type="Sprite3">
+                    <param id="0" name="Object">Sprite</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-4" name="Set position to another object" sid="7524080310735245" type="Sprite4">
+                    <param id="0" name="Object">Sprite2</param>
+                    <param id="1" name="Image point (optional)">1</param>
+                </action>
+                <action id="-7" name="Set size" sid="8520377156780377" type="Sprite6">
+                    <param id="0" name="Width">hp1*dlin1</param>
+                    <param id="1" name="Height">10</param>
+                </action>
+                <action id="-7" name="Set size" sid="2830151454356221" type="Sprite7">
+                    <param id="0" name="Width">hp2*dlin2</param>
+                    <param id="1" name="Height">10</param>
+                </action>
+                <action id="0" name="Set text" sid="2888042896747157" type="Text">
+                    <param id="0" name="Text">money1</param>
+                </action>
+                <action id="0" name="Set text" sid="5835942521244442" type="Text2">
+                    <param id="0" name="Text">money2</param>
+                </action>
+                <action id="0" name="Set text" sid="7869187459058321" type="Text22">
+                    <param id="0" name="Text">damage2</param>
+                </action>
+                <action id="0" name="Set text" sid="9837021761115377" type="Text21">
+                    <param id="0" name="Text">hp4</param>
+                </action>
+                <action id="0" name="Set text" sid="3913872095261743" type="Text17">
+                    <param id="0" name="Text">damage1</param>
+                </action>
+                <action id="0" name="Set text" sid="5182042000598769" type="Text19">
+                    <param id="0" name="Text">hp3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="7436691463890351">
+            <conditions>
+                <condition id="2" name="Key is down" sid="6106642137781919" type="Keyboard">
+                    <param id="0" name="Key">87 (W)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Car" id="7" name="Simulate control" sid="7000897813650583" type="Sprite">
+                    <param id="0" name="Control">2</param>
+                </action>
+                <action behavior="Car" id="7" name="Simulate control" sid="4383117516107209" type="Sprite3">
+                    <param id="0" name="Control">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5131468146572224">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7616509484760242" type="Keyboard">
+                    <param id="0" name="Key">68 (D)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Car" id="7" name="Simulate control" sid="5910558974241418" type="Sprite">
+                    <param id="0" name="Control">1</param>
+                </action>
+                <action behavior="Car" id="7" name="Simulate control" sid="7046493175320757" type="Sprite3">
+                    <param id="0" name="Control">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6390470746304432">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2205111295400033" type="Keyboard">
+                    <param id="0" name="Key">83 (S)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Car" id="7" name="Simulate control" sid="9417337101816239" type="Sprite">
+                    <param id="0" name="Control">3</param>
+                </action>
+                <action behavior="Car" id="7" name="Simulate control" sid="6016822237586811" type="Sprite3">
+                    <param id="0" name="Control">3</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1557015710042622">
+            <conditions>
+                <condition id="2" name="Key is down" sid="9626079733074115" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Car" id="7" name="Simulate control" sid="3556187683661525" type="Sprite">
+                    <param id="0" name="Control">0</param>
+                </action>
+                <action behavior="Car" id="7" name="Simulate control" sid="4358025810286631" type="Sprite3">
+                    <param id="0" name="Control">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="483579202884223">
+            <conditions>
+                <condition id="3" name="On key released" sid="658186931841352" type="Keyboard">
+                    <param id="0" name="Key">96 (Num 0)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="7191238662833635" type="Sprite4">
+                    <param id="0" name="Object">Sprite5</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5607347684835519">
+            <conditions>
+                <condition id="3" name="On key released" sid="9279579101314187" type="Keyboard">
+                    <param id="0" name="Key">81 (Q)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="1885838183592505" type="Sprite3">
+                    <param id="0" name="Object">Sprite5</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="Image point">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5727049629737718">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="6160642659498333" type="Sprite">
+                    <param id="0" name="Object">Sprite5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="8206762174862732" type="System">
+                    <param id="0" name="Variable">hp1</param>
+                    <param id="1" name="Value">damage2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="5846249232166565" type="Sprite5" />
+            </actions>
+        </event-block>
+        <event-block sid="9357992384462663">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="5514774785789809" type="Sprite2">
+                    <param id="0" name="Object">Sprite5</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="1986632812796424" type="System">
+                    <param id="0" name="Variable">hp2</param>
+                    <param id="1" name="Value">damage1</param>
+                </action>
+                <action id="-9" name="Destroy" sid="3710490104039556" type="Sprite5" />
+            </actions>
+        </event-block>
+        <event-block sid="7947121278498514">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="5594560193092319" type="System">
+                    <param id="0" name="Variable">hp1</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="3787901037156274" type="Sprite">
+                    <param id="0" name="X">random(854)</param>
+                    <param id="1" name="Y">random(480)</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="6360463535728822" type="System">
+                    <param id="0" name="Variable">money2</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-9" name="Set value" sid="4359751329476598" type="System">
+                    <param id="0" name="Variable">damage1</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="6268194775384823" type="System">
+                    <param id="0" name="Variable">dlin1</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+                <action id="-9" name="Set value" sid="2117504876582202" type="System">
+                    <param id="0" name="Variable">hp1</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="8844383489815976" type="System">
+                    <param id="0" name="Variable">hp3</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="6342227419813455">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="9211390735533909" type="System">
+                    <param id="0" name="Variable">hp2</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Set position" sid="2839986554551302" type="Sprite2">
+                    <param id="0" name="X">random(854)</param>
+                    <param id="1" name="Y">random(480)</param>
+                </action>
+                <action id="-11" name="Subtract from" sid="9713355665612996" type="System">
+                    <param id="0" name="Variable">money1</param>
+                    <param id="1" name="Value">-1</param>
+                </action>
+                <action id="-9" name="Set value" sid="9323317086197755" type="System">
+                    <param id="0" name="Variable">damage2</param>
+                    <param id="1" name="Value">0.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="9522200199206626" type="System">
+                    <param id="0" name="Variable">dlin2</param>
+                    <param id="1" name="Value">50</param>
+                </action>
+                <action id="-9" name="Set value" sid="3086923670052525" type="System">
+                    <param id="0" name="Variable">hp2</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-9" name="Set value" sid="1043142631418957" type="System">
+                    <param id="0" name="Variable">hp4</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="5009073544728654">
+            <conditions>
+                <condition id="2" name="Key is down" sid="2532834605057345" type="Keyboard">
+                    <param id="0" name="Key">98 (Num 2)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="2712073367479259" type="System">
+                    <param id="0" name="Variable">money2</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="8865044600219733">
+                    <conditions />
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="4263484340538159" type="System">
+                            <param id="0" name="Variable">money2</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6017047480298441" type="System">
+                            <param id="0" name="Variable">dlin2</param>
+                            <param id="1" name="Value">25</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3742680290346974" type="System">
+                            <param id="0" name="Variable">hp2</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="1157042628466372" type="System">
+                            <param id="0" name="Variable">hp4</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="8034553341332724">
+            <conditions>
+                <condition id="2" name="Key is down" sid="7557565482950199" type="Keyboard">
+                    <param id="0" name="Key">97 (Num 1)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="876312288155373" type="System">
+                    <param id="0" name="Variable">money2</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2054385896131145">
+                    <conditions />
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="6904211438992842" type="System">
+                            <param id="0" name="Variable">money2</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="2217300530423486" type="System">
+                            <param id="0" name="Variable">damage2</param>
+                            <param id="1" name="Value">-0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="7217004004601797">
+            <conditions>
+                <condition id="2" name="Key is down" sid="5078129507958916" type="Keyboard">
+                    <param id="0" name="Key">82 (R)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="9347534626180715" type="System">
+                    <param id="0" name="Variable">money1</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">10</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="2548642231149372">
+                    <conditions />
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="4961962750235881" type="System">
+                            <param id="0" name="Variable">money1</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="6982437082994778" type="System">
+                            <param id="0" name="Variable">hp3</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="9089744155200063" type="System">
+                            <param id="0" name="Variable">hp1</param>
+                            <param id="1" name="Value">10</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="3624576247168692" type="System">
+                            <param id="0" name="Variable">dlin1</param>
+                            <param id="1" name="Value">25</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="1675923423997097">
+            <conditions>
+                <condition id="2" name="Key is down" sid="860792925237353" type="Keyboard">
+                    <param id="0" name="Key">69 (E)</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="7527366307238264" type="System">
+                    <param id="0" name="Variable">money1</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block sid="4150891204743571">
+                    <conditions />
+                    <actions>
+                        <action id="-11" name="Subtract from" sid="9178310004356456" type="System">
+                            <param id="0" name="Variable">money1</param>
+                            <param id="1" name="Value">5</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="5129044289025362" type="System">
+                            <param id="0" name="Variable">damage1</param>
+                            <param id="1" name="Value">-0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="4691262896003544">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="6838293350952279" type="System">
+                    <param id="0" name="Interval (seconds)">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-3" name="Create object" sid="3234567456866713" type="System">
+                    <param id="0" name="Object to create">Sprite12</param>
+                    <param id="1" name="Layer">0</param>
+                    <param id="2" name="X">random(854)</param>
+                    <param id="3" name="Y">random(480)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="3933714067845835">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="7982803295273387" type="Sprite2">
+                    <param id="0" name="Object">Sprite12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="9460482451563769" type="System">
+                    <param id="0" name="Variable">hp2</param>
+                    <param id="1" name="Value">0.2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="6110058861162164" type="Sprite12" />
+            </actions>
+        </event-block>
+        <event-block sid="7641460784050309">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="3567535605834741" type="Sprite">
+                    <param id="0" name="Object">Sprite12</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-11" name="Subtract from" sid="1389545674488732" type="System">
+                    <param id="0" name="Variable">hp1</param>
+                    <param id="1" name="Value">0.2</param>
+                </action>
+                <action id="-9" name="Destroy" sid="8709584572681898" type="Sprite12" />
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>
